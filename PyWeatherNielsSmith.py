@@ -1,10 +1,11 @@
+'''this file retrieves weather data for the selected city'''
+
 import requests
 
-city_name = "Copenhagen"
-API_Key = "290a1bec5e623e9a6791b687e8f47bd3"
+CITY_NAME = "Copenhagen"
+API_KEY = "290a1bec5e623e9a6791b687e8f47bd3"
 
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_Key}"
-
+url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}"
 response = requests.get(url)
 
 if response.status_code == 200:
@@ -15,7 +16,6 @@ if response.status_code == 200:
     temperature_celsius = round(temperature_celsius, 2)
     temperature_fahrenheit = round((temperature_celsius*9/5)+32, 2)
     # humidity = weather_data["main"]["humidity"]
-
     print(f"Temperature: {temperature_celsius} Celsius")
     print(f"Temperature: {temperature_fahrenheit} Farhrenheit")
     print(f"Weather: {weather_description}")
