@@ -2,7 +2,7 @@
 
 import requests
 
-CITY_NAME = "Copenhagen"
+CITY_NAME = "Concord, New hampshire"
 API_KEY = "290a1bec5e623e9a6791b687e8f47bd3"
 
 url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}"
@@ -21,4 +21,4 @@ if response.status_code == 200:
     print(f"Weather: {weather_description}")
     # print(f"Humidity: {humidity}")
 else:
-    print("Failed to fetch weather data.")
+    print("No weather today. Sucks to suck, bummer")
