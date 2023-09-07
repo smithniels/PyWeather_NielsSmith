@@ -16,7 +16,7 @@ if response.status_code == 200:
     # print(weather_data["weather"])
     temperature_celsius = temperature_kelvin - 273.15
     temperature_celsius = round(temperature_celsius, 2)
-    temperature_fahrenheit = round((temperature_celsius*9/5)+32, 2)
+    temperature_fahrenheit = round((temperature_celsius*9/5)+32, 1)
     print("Weather in " + CITY_NAME)
     print(f"Temperature: {temperature_celsius} Celsius")
     print(f"Temperature: {temperature_fahrenheit} Fahrenheit")
@@ -24,3 +24,7 @@ if response.status_code == 200:
 else:
     print("No weather today. Sucks to suck, bummer")
     print(response.status_code)
+
+
+# Thursday 23:16    6:30
+#
